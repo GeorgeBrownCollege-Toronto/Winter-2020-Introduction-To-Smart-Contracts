@@ -8,7 +8,7 @@
 
 - run `ganache-cli`
 
-![GitHub Logo](/images/ganache-cli.png)
+![GitHub Logo](./images/ganache-cli.png)
 
 - open `index.html` in browser
 
