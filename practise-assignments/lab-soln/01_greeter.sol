@@ -6,7 +6,6 @@
 pragma solidity ^0.5.16;
 
 /// @title Greeter
-/// @author Cyrus Adkisson
 // The contract definition. A constructor of the same name will be automatically called on contract creation.
 contract Greeter {
 
