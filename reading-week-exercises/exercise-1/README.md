@@ -89,3 +89,8 @@ faucets. Here are some alternative testnet faucets.
 - Universal faucet [https://faucets.blockxlabs.com](https://faucets.blockxlabs.com)
 
 #### Congratulations, you downloaded, installed and configured MetaMask!
+
+
+## Submission
+
+ - Submit the etherscan link that funded your account using testnet faucet.
