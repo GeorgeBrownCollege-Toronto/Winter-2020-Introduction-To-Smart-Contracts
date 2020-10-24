@@ -86,5 +86,6 @@ faucets. Here are some alternative testnet faucets.
 - Kovan [https://gitter.im/kovan-testnet/faucet](https://gitter.im/kovan-testnet/faucet)
 - Rinkeby [http://rinkeby-faucet.com/](http://rinkeby-faucet.com/)
 - Goerli [https://faucet.goerli.mudit.blog/](https://faucet.goerli.mudit.blog/)
+- Universal faucet [https://faucets.blockxlabs.com](https://faucets.blockxlabs.com)
 
 #### Congratulations, you downloaded, installed and configured MetaMask!
