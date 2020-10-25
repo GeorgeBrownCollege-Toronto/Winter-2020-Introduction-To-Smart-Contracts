@@ -4,3 +4,4 @@
 - [Accounts and addresses](./exercise-2)
 - [Starting, Pausing and Stopping Smart Contracts](./exercise-3)
 - [Understanding Mappings Intro](./exercise-4)
+- [Error handling in Solidity](./exercise-5)
