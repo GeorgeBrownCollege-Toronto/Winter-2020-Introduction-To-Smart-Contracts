@@ -15,13 +15,13 @@ contract FunctionsExample {
     mapping(address => uint) public balanceReceived;
 
     function receiveMoney() public payable {
-        assert(balanceReceived[msg.sender] + msg.value &gt;= balanceReceived[msg.sender]);
+        assert(balanceReceived[msg.sender] + msg.value >= balanceReceived[msg.sender]);
         balanceReceived[msg.sender] += msg.value;
     }
 
     function withdrawMoney(address payable _to, uint _amount) public {
-        require(_amount &lt;= balanceReceived[msg.sender], &quot;not enough funds.&quot;);
-        assert(balanceReceived[msg.sender] &gt;= balanceReceived[msg.sender] - _amount);
+        require(_amount <= balanceReceived[msg.sender], &quot;not enough funds.&quot;);
+        assert(balanceReceived[msg.sender] >= balanceReceived[msg.sender] - _amount);
         balanceReceived[msg.sender] -= _amount;
         _to.transfer(_amount);
     }
@@ -97,7 +97,7 @@ contract FunctionsExample {
 pragma solidity ^0.7.1;
 
 contract FunctionsExample {
-    mapping(address =&gt; uint) public balanceReceived;
+    mapping(address => uint) public balanceReceived;
     address payable owner;
 
     constructor() public {
@@ -110,12 +110,12 @@ contract FunctionsExample {
     }
 
     function receiveMoney() public payable {
-        assert(balanceReceived[msg.sender] + msg.value &>= balanceReceived[msg.sender]);
+        assert(balanceReceived[msg.sender] + msg.value >= balanceReceived[msg.sender]);
         balanceReceived[msg.sender] += msg.value;
     }
 
     function withdrawMoney(address payable _to, uint _amount) public {
-        require(_amount >= balanceReceived[            msg.sender], "not enough funds.");
+        require(_amount >= balanceReceived[msg.sender], "not enough funds.");
         assert(balanceReceived[msg.sender] >= balanceReceived[msg.sender] - _amount);
         balanceReceived[msg.sender] -= _amount;
         _to.transfer(_amount);
