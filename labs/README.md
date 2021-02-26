@@ -6,3 +6,4 @@
 - [Understanding Mappings Intro](./exercise-4)
 - [Error handling in Solidity](./exercise-5)
 - [View/Pure Functions,Constructor and Fallback Function](./exercise-6)
+- [Inheritance, Modifier, Importing](./exercise-7)
