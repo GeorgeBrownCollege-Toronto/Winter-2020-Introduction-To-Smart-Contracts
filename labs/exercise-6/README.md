@@ -20,7 +20,7 @@ contract FunctionsExample {
     }
 
     function withdrawMoney(address payable _to, uint _amount) public {
-        require(_amount <= balanceReceived[msg.sender], &quot;not enough funds.&quot;);
+        require(_amount <= balanceReceived[msg.sender], "not enough funds.");
         assert(balanceReceived[msg.sender] >= balanceReceived[msg.sender] - _amount);
         balanceReceived[msg.sender] -= _amount;
         _to.transfer(_amount);
