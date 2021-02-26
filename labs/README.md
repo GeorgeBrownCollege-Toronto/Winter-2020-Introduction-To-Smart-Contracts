@@ -9,3 +9,4 @@
 - [Inheritance, Modifier, Importing](./exercise-7)
 - [Events and Return Variables](./exercise-8)
 - [Libraries, Using [...] for [...]](./exercise-9)
+- [Using Web3.js to Query the Balance](./exercise-10)
