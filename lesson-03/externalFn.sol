@@ -2,36 +2,34 @@
 
 pragma solidity ^0.7.1;
 
-contract InfoFeed {
-    function info() public payable returns(uint) {
+contract Infofeed {
+    function info() public pure returns (uint) {
         return 42;
-    } 
-    
-    function getBal() public view returns(uint) {
-        return address(this).balance;
     }
 }
 
 interface ISample {
-    function callFeed(address) external returns(uint);
+    function callFeed() external view returns(uint);
 }
 
-contract Sample is ISample{
-    function callFeed(address) public virtual override returns(uint){
+contract Sample is ISample {
+    function callFeed() public virtual override view returns(uint) {
         return 2;
     }
     
-    modifier onlyOwner() virtual{
-        _;
+    modifier onlyOwner() virtual {
+        _;   
     }
 }
 
 contract Consumer is Sample{
-    InfoFeed feed;
-    address public owner;
-    constructor(InfoFeed _addr) payable {
-        feed = _addr;
-        owner =msg.sender;
+    Infofeed feed;
+    address owner;
+    
+    constructor(Infofeed _feed) payable {
+        require(msg.value == 1 ether);
+        feed = _feed;
+        owner = msg.sender;
     }
     
     modifier onlyOwner() override {
@@ -39,11 +37,19 @@ contract Consumer is Sample{
         _;
     }
     
-    function callFeed(address) public override returns(uint){
-        return feed.info{value:10,gas:200}();
+    function callFeed() public view override returns(uint) {
+        return feed.info();
     }
     
-    function getBal() public view returns(uint) {
-        return address(this).balance;
+    function getFeed() public view returns(address) {
+        return address(feed);
+    }
+    
+    function getOwner() public view returns(address) {
+        return owner;
+    }
+    
+    function getBalance() public view returns(uint) {
+        return address(this).balance; // wei units
     }
 }
