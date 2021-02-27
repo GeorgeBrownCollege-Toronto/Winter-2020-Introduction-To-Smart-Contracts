@@ -8,12 +8,13 @@ abstract contract A {
     constructor(uint _x) {
         x = _x;
     }
-} 
+}
 
-contract B is A{
+// values needs to be determined during runt time.
+contract B is A {
     constructor(uint _x) A(_x) {}
 }
 
-contract C is A(1){
-    constructor() {}
+// values to parent contract are pre-defined during compile time
+contract C is A(1) {
 }

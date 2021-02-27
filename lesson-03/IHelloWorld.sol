@@ -2,32 +2,34 @@
 
 pragma solidity ^0.7.1;
 
-interface IHelloWorld {
+interface IHelloWorld { // interface functions are virtual by default
+    function setValue(uint) external; 
     function getValue() external view returns(uint);
-    function setValue(uint) external;
-}
+} 
 
-contract HelloWorld is IHelloWorld{
-    uint private simpleInt;
+contract HelloWorld is IHelloWorld {
+    uint simpleInt;
     
+    function setValue(uint _val) public override {
+        simpleInt = _val;
+    } 
     function getValue() public view override returns(uint) {
         return simpleInt;
-    }
-    
-    function setValue(uint _v) public override {
-        simpleInt = _v;
     }
 }
 
 contract Client {
-    IHelloWorld myObj;
+    address helloWorld;
     
-    constructor() {
-        myObj = new HelloWorld();
+    constructor(address _helloWorld) {
+        helloWorld = _helloWorld;
     }
     
-    function  getAndSetIntegerValue() public returns(uint) {
-        myObj.setValue(100);
-        return myObj.getValue();
+    function setValueViaIHelloWorld(uint _val) public {
+        IHelloWorld(helloWorld).setValue(_val);
+    }
+    
+    function getValueViaIHelloWorld() public view returns(uint) {
+        return IHelloWorld(helloWorld).getValue();
     }
 }

@@ -3,24 +3,35 @@
 pragma solidity ^0.7.1;
 
 contract HelloWorld {
-    uint private simpleInt;
+    uint simpleInt; 
+    // uint private simpleInt;
     
-    function getValue() public view returns(uint){
+    function getSimpleInt() public view returns(uint) {
         return simpleInt;
     }
     
-    function setValue(uint _value) public {
-        simpleInt = _value;
+    function setSimpleInt(uint _simpleInt) public {
+        simpleInt = _simpleInt;
     }
 }
 
 contract Client {
-    address public obj;
     
-    function useExistingAddress() public returns(uint) {
-        HelloWorld myObj = new HelloWorld();
-        obj = address(myObj);
-        myObj.setValue(10);
-        return myObj.getValue();
+    HelloWorld myObj;
+    
+    constructor() {
+        myObj = new HelloWorld();
+    }
+    
+    function getMyobj() public view returns(address) {
+        return address(myObj);
+    }
+    
+    function setNumber(uint _number) public {
+        myObj.setSimpleInt(_number);
+    }
+    
+    function getNumber() public view returns(uint) {
+        return myObj.getSimpleInt();
     }
 }

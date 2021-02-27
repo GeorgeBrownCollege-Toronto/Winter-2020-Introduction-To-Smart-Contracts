@@ -2,27 +2,33 @@
 
 pragma solidity ^0.7.1;
 
-contract ParentContract {
+contract Parent {
     uint internal simpleInt;
     
     function setInteger(uint _value) external {
         simpleInt = _value;
     }
+    
 }
 
-contract ChildContract is ParentContract {
-    bool private simpleBool;
-    
-    function getInteger() public view returns(uint){
+contract Child is Parent {
+    function getInteger() public view returns(uint) {
         return simpleInt;
     }
 }
 
 contract Client {
-    ChildContract pc = new ChildContract();
+    Child _child = new Child();
     
-    function workWithINheritance() public returns(uint) {
-        pc.setInteger(100);
-        return pc.getInteger();
+    function set(uint _val) public {
+        _child.setInteger(_val);
+    }
+    
+    function get() public view returns(uint) {
+        return _child.getInteger();
+    }
+    
+    function getChild() public view returns(address) {
+        return address(_child);
     }
 }

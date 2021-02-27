@@ -3,32 +3,40 @@
 pragma solidity ^0.7.1;
 
 contract Ballot {
-    
+
+    // attributes of voter
     struct Voter {
-      uint weight;
-      bool voted;
-      uint vote;
+        uint weight; // how much value a vote has? 1,2,?
+        bool voted;  // whether voted or not
+        uint vote;   // which proposal index has received vote
     }
-    
-    struct Proposal{
+
+    // attributes of proposal
+    struct Proposal {
         uint voteCount;
     }
     
+    // person who conducts election
     address public chairperson; // Ethereum address is 20 bytes long = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4
+    
+    // voters list
     mapping(address => Voter) public voters;
     // {
     //     "0xabcd.1234" => {weight,voted,vote},
     //     "0xab12..def2" => {weight, voted,vote}
     // }
     // syntax for mapping and it is used to represent JSON structure in solidity
-    // mapping( keyType => valueType ) public variable_name ;
-    Proposal[] public proposals; 
+    // mapping( keyType => valueType ) public variable_name ;   
+    // list of Proposals
+    Proposal[] public proposals;
     
+    // election takes place in phases
     enum Phase {Init, Regs, Vote, Done}
-    // it can take only 0,1,2,3 values:
+    //            0 ,  1,    2,   3
     
-    Phase public state = Phase.Done;
-    
+    // intial phase would be Init
+    Phase public state = Phase.Init;
+
     constructor (uint numProposals) {
         chairperson = msg.sender;
         voters[chairperson].weight = 2;
