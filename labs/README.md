@@ -10,3 +10,4 @@
 - [Events and Return Variables](./exercise-8)
 - [Libraries, Using [...] for [...]](./exercise-9)
 - [Using Web3.js to Query the Balance](./exercise-10)
+- [Using Web3.js for Contract Interaction](./exercise-11)
