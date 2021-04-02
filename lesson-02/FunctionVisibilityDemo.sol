@@ -3,22 +3,32 @@
 pragma solidity ^0.7.1;
 
 contract FunctionVisibilityDemo {
-    
+    // public
     function thisIsAPublicFn() public {
-        this.thisIsAnExternalFn();
+        // body
+        this.thisIsExternalFn();
         _thisIsAPrivateFn();
-        _thisIsAInternalFn();
+        _thisIsInternalFn();
     }
     
+    // private
     function _thisIsAPrivateFn() private {
-        
+        // body
     }
     
-    function _thisIsAInternalFn() internal {
-        
+    // internal
+    function _thisIsInternalFn() internal {
+        // body
     }
     
-    function thisIsAnExternalFn() external {
-        
+    // external
+    function thisIsExternalFn() external {
+        // body
+        thisIsAPublicFn();
     }
+    
+    // // function syntax
+    // function function_name(<arg-data-type> <arg-data-location> <arg-name>,...,) <visibility-specifier public|private|internal|external> <state-mutability view|pure|payable> [returns(<return-data-type> [return-arg-name])] {
+    //     // function body
+    // }
 }
