@@ -1,0 +1,208 @@
+{
+  "id": "c1378c14a8d953a5b4f0107f30336f34",
+  "_format": "hh-sol-build-info-1",
+  "solcVersion": "0.6.5",
+  "solcLongVersion": "0.6.5+commit.f956cc89",
+  "input": {
+    "language": "Solidity",
+    "sources": {
+      "contracts/contract.sol": {
+        "content": "pragma solidity ^0.6.2;\n\ncontract Contract {\n\tbool public a = true;\n    bool public b;\n}\n\n"
+      }
+    },
+    "settings": {
+      "optimizer": {
+        "enabled": false,
+        "runs": 200
+      },
+      "outputSelection": {
+        "*": {
+          "*": [
+            "abi",
+            "evm.bytecode",
+            "evm.deployedBytecode",
+            "evm.methodIdentifiers"
+          ],
+          "": [
+            "ast"
+          ]
+        }
+      }
+    }
+  },
+  "output": {
+    "contracts": {
+      "contracts/contract.sol": {
+        "Contract": {
+          "abi": [
+            {
+              "inputs": [],
+              "name": "a",
+              "outputs": [
+                {
+                  "internalType": "bool",
+                  "name": "",
+                  "type": "bool"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [],
+              "name": "b",
+              "outputs": [
+                {
+                  "internalType": "bool",
+                  "name": "",
+                  "type": "bool"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            }
+          ],
+          "evm": {
+            "bytecode": {
+              "linkReferences": {},
+              "object": "608060405260016000806101000a81548160ff02191690831515021790555034801561002a57600080fd5b5060d2806100396000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c80630dbe671f1460375780634df7e3d0146057575b600080fd5b603d6077565b604051808215151515815260200191505060405180910390f35b605d6089565b604051808215151515815260200191505060405180910390f35b6000809054906101000a900460ff1681565b600060019054906101000a900460ff168156fea26469706673582212202f7ccb0883de128ae2f9519ec68208a8055721c367954d491a1da9d50a6ccf4f64736f6c63430006050033",
+              "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x1 PUSH1 0x0 DUP1 PUSH2 0x100 EXP DUP2 SLOAD DUP2 PUSH1 0xFF MUL NOT AND SWAP1 DUP4 ISZERO ISZERO MUL OR SWAP1 SSTORE POP CALLVALUE DUP1 ISZERO PUSH2 0x2A JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0xD2 DUP1 PUSH2 0x39 PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH1 0x32 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0xDBE671F EQ PUSH1 0x37 JUMPI DUP1 PUSH4 0x4DF7E3D0 EQ PUSH1 0x57 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x3D PUSH1 0x77 JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 DUP3 ISZERO ISZERO ISZERO ISZERO DUP2 MSTORE PUSH1 0x20 ADD SWAP2 POP POP PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST PUSH1 0x5D PUSH1 0x89 JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 DUP3 ISZERO ISZERO ISZERO ISZERO DUP2 MSTORE PUSH1 0x20 ADD SWAP2 POP POP PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST PUSH1 0x0 DUP1 SWAP1 SLOAD SWAP1 PUSH2 0x100 EXP SWAP1 DIV PUSH1 0xFF AND DUP2 JUMP JUMPDEST PUSH1 0x0 PUSH1 0x1 SWAP1 SLOAD SWAP1 PUSH2 0x100 EXP SWAP1 DIV PUSH1 0xFF AND DUP2 JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0x2F PUSH29 0xCB0883DE128AE2F9519EC68208A8055721C367954D491A1DA9D50A6CCF 0x4F PUSH5 0x736F6C6343 STOP MOD SDIV STOP CALLER ",
+              "sourceMap": "25:63:0:-:0;;;62:4;46:20;;;;;;;;;;;;;;;;;;;;25:63;5:9:-1;2:2;;;27:1;24;17:12;2:2;25:63:0;;;;;;;"
+            },
+            "deployedBytecode": {
+              "immutableReferences": {},
+              "linkReferences": {},
+              "object": "6080604052348015600f57600080fd5b506004361060325760003560e01c80630dbe671f1460375780634df7e3d0146057575b600080fd5b603d6077565b604051808215151515815260200191505060405180910390f35b605d6089565b604051808215151515815260200191505060405180910390f35b6000809054906101000a900460ff1681565b600060019054906101000a900460ff168156fea26469706673582212202f7ccb0883de128ae2f9519ec68208a8055721c367954d491a1da9d50a6ccf4f64736f6c63430006050033",
+              "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH1 0x32 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0xDBE671F EQ PUSH1 0x37 JUMPI DUP1 PUSH4 0x4DF7E3D0 EQ PUSH1 0x57 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x3D PUSH1 0x77 JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 DUP3 ISZERO ISZERO ISZERO ISZERO DUP2 MSTORE PUSH1 0x20 ADD SWAP2 POP POP PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST PUSH1 0x5D PUSH1 0x89 JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 DUP3 ISZERO ISZERO ISZERO ISZERO DUP2 MSTORE PUSH1 0x20 ADD SWAP2 POP POP PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST PUSH1 0x0 DUP1 SWAP1 SLOAD SWAP1 PUSH2 0x100 EXP SWAP1 DIV PUSH1 0xFF AND DUP2 JUMP JUMPDEST PUSH1 0x0 PUSH1 0x1 SWAP1 SLOAD SWAP1 PUSH2 0x100 EXP SWAP1 DIV PUSH1 0xFF AND DUP2 JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0x2F PUSH29 0xCB0883DE128AE2F9519EC68208A8055721C367954D491A1DA9D50A6CCF 0x4F PUSH5 0x736F6C6343 STOP MOD SDIV STOP CALLER ",
+              "sourceMap": "25:63:0:-:0;;;;5:9:-1;2:2;;;27:1;24;17:12;2:2;25:63:0;;;;;;;;;;;;;;;;;;;;;12:1:-1;9;2:12;46:20:0;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;72:13;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;46:20;;;;;;;;;;;;;:::o;72:13::-;;;;;;;;;;;;;:::o"
+            },
+            "methodIdentifiers": {
+              "a()": "0dbe671f",
+              "b()": "4df7e3d0"
+            }
+          }
+        }
+      }
+    },
+    "sources": {
+      "contracts/contract.sol": {
+        "ast": {
+          "absolutePath": "contracts/contract.sol",
+          "exportedSymbols": {
+            "Contract": [
+              7
+            ]
+          },
+          "id": 8,
+          "nodeType": "SourceUnit",
+          "nodes": [
+            {
+              "id": 1,
+              "literals": [
+                "solidity",
+                "^",
+                "0.6",
+                ".2"
+              ],
+              "nodeType": "PragmaDirective",
+              "src": "0:23:0"
+            },
+            {
+              "abstract": false,
+              "baseContracts": [],
+              "contractDependencies": [],
+              "contractKind": "contract",
+              "documentation": null,
+              "fullyImplemented": true,
+              "id": 7,
+              "linearizedBaseContracts": [
+                7
+              ],
+              "name": "Contract",
+              "nodeType": "ContractDefinition",
+              "nodes": [
+                {
+                  "constant": false,
+                  "functionSelector": "0dbe671f",
+                  "id": 4,
+                  "name": "a",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7,
+                  "src": "46:20:0",
+                  "stateVariable": true,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "46:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 3,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "62:4:0",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "visibility": "public"
+                },
+                {
+                  "constant": false,
+                  "functionSelector": "4df7e3d0",
+                  "id": 6,
+                  "name": "b",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7,
+                  "src": "72:13:0",
+                  "stateVariable": true,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 5,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "72:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "public"
+                }
+              ],
+              "scope": 8,
+              "src": "25:63:0"
+            }
+          ],
+          "src": "0:90:0"
+        },
+        "id": 0
+      }
+    }
+  }
+}
